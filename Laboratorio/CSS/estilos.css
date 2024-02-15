@@ -1,0 +1,90 @@
+/*Importar fuete*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+/*Nota: sans-serif sirve para que pueda ser mas visual*/
+
+/*------------------- Estilos generales -------------------*/
+/*Estilos para el cuerpo de la pagina*/
+body {
+    font-family: 'Roboto', sans-serif; /*Fuente del texto*/
+    margin: 0; /*Margen del cuerpo de la pagina*/
+    padding: 0; /*Espaciado del cuerpo de la pagina*/
+    background-color: #f4f4f4; /*Color de fondo del cuerpo de la pagina*/
+    color: #000; /*Color del texto del cuerpo de la pagina*/
+}
+
+/*------------------- Sección de preguntas -------------------*/
+/*Estilos para el contenedor del titulo*/
+.hero__title.container {
+    width: 95%; /*Ancho total del contenedor de la pagina*/
+    max-width: 1200x; /*Ancho máximo del contenido*/
+    margin: 0 auto; /*Centrar el contenido horizontalmente*/
+    padding: 20px; /*Espaciado interno del contenedor*/
+    margin-top: 50px; /*Espaciado inferior del contenedor*/
+}
+
+/*Estilos para el contenedor de preguntas*/
+.hero__preguntas.container {
+    width: 90%; /*Ancho total del contenedor de la pagina*/
+    max-width: 1200x; /*Ancho máximo del contenido*/
+    margin: 0 auto; /*Centrar el contenido horizontalmente*/
+    padding: 40px; /*Espaciado interno del contenedor*/
+    overflow-y: auto; /*Hacer que la altura sea desplazable*/
+    height: 100vh; /*Altura igual al 100% de la ventana del navegador*/
+}
+
+/*Estilos para el titulo de la sección de preguntas*/
+.hero__preguntas h1 {
+    font-size: 30px; /*Cambiar el tamaño de la fuente*/
+    color: #000; /*Color del texto*/
+    text-align: center; /*Alinear el texto al centro*/
+    margin-bottom: 25px; /*Espaciado inferior del titulo*/
+}
+
+.hero__preguntas h3 {
+    font-size: 25px; /*Cambiar el tamaño de la fuente*/
+    color: #000; /*Color del texto*/
+    text-align: center; /*Alinear el texto al centro*/
+    margin-top: 20px; /*Espaciado superior del titulo*/
+    margin-bottom: 20px; /*Espaciado inferior del titulo*/
+}
+
+/*Estilos para las preguntas*/
+.hero__preguntas {
+    font-size: 20px; /*Cambiar el tamaño de la fuente*/
+    margin-top: 10px; /*Espaciado superior*/
+}
+
+/*Estilos para las listas*/
+.hero__preguntas ul li {
+    font-size: 18px; /*Cambiar el tamaño de la fuente*/
+    margin-top: 10px; /*Espaciado superior*/
+}
+
+.hero__preguntas ol li {
+    font-size: 18px; /*Cambiar el tamaño de la fuente*/
+    margin-top: 10px; /*Espaciado superior*/
+}
+
+/*Estilos para las respuestas*/
+.hero__respuesta {
+    width: 90%; /*Ancho total del contenedor*/
+    margin: 0 auto; /*Centrar el contenido horizontalmente*/
+    font-size: 18px; /*Cambiar el tamaño de la fuente*/
+    margin-top: 30px; /*Espaciado superior*/
+    margin-bottom: 30px; /*Espaciado inferior*/
+}
+/*------------------------------------------------------------*/
+
+/*----------------------- Pie de pagina ----------------------*/
+/*Estilos para el pie de pagina*/
+footer {
+    width: 100%; /*Ancho total del pie de pagina*/
+    font-size: 17px; /*Cambiar el tamaño de la fuente*/
+    background-color: #fff; /*Color de fondo del pie de pagina*/
+    color: #000; /*Color del texto del pie de pagina*/
+    text-align: center; /*Alinear el texto al centro*/
+    padding: 10px; /*Espaciado interno del pie de pagina*/
+    
+    bottom: 0; /*Alinear el pie de pagina en la parte inferior*/
+}
+/*------------------------------------------------------------*/
