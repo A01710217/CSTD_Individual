@@ -2,89 +2,241 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 /*Nota: sans-serif sirve para que pueda ser mas visual*/
 
-/*------------------- Estilos generales -------------------*/
+/*----------------- Definir custom properties -----------------*/
+:root {
+    --padding--container: 100px 0; /*Espaciado interno del contenedor*/
+    -webkit-margin-top-collapse: 20px; /*Espaciado superior del contenedor*/
+    -webkit-margin-bottom-collapse: 20px; /*Espaciado inferior del contenedor*/
+    --colorbackground: #000; /*Color de fondo del cuerpo de la pagina 333232*/
+
+    /*Neones*/
+    --color-neon-cyan: 0px 0px 25px #2cd5c4,
+                       0px 0px 20px #2cd5c4,
+                       0px 0px 50px #2cd5c4; /*Sombra del texto*/
+
+    --color-neon-blanco: 0px 0px 10px #fff,
+                         0px 0px 30px #fff,
+                         0px 0px 40px #fff; /*Sombra del texto*/
+    --color-neon-naranja: 0px 0px 10px #ffc845,
+                          0px 0px 20px #ffc845,
+                          0px 0px 40px #ffc845; /*Sombra del texto*/
+
+    --color-neon-negro: 0px 0px 10px #000,
+                        0px 0px 10px #000,
+                        0px 0px 10px #000;
+
+    --color-neon-azul: 0px 0px 10px #5cfaff,
+                       0px 0px 20px #5cfaff,
+                       0px 0px 40px #5cfaff; /*Sombra del texto*/
+    
+    --color-neon-rosaMexicano: 0px 0px 10px #e4007c,
+                               0px 0px 20px #e4007c,
+                               0px 0px 40px  #e4007c; /*Sombra del texto*/
+
+    --color-neon-verde: 0px 0px 10px #00ff00,
+                        0px 0px 20px #00ff00,
+                        0px 0px 40px #00ff00; /*Sombra del texto*/
+
+    --color-neon-amarillo: 0px 0px 10px #ffff00,
+                           0px 0px 20px #ffff00,
+                           0px 0px 40px #ffff00; /*Sombra del texto*/
+
+    --color-neon-rojo: 0px 0px 10px #ff0000,
+                       0px 0px 20px #ff0000,
+                       0px 0px 40px #ff0000; /*Sombra del texto*/
+}
+/*-------------------------------------------------------------*/
+
+/*--------------------- Estilos generales --------------------*/
 /*Estilos para el cuerpo de la pagina*/
 body {
     font-family: 'Roboto', sans-serif; /*Fuente del texto*/
-    margin: 0; /*Margen del cuerpo de la pagina*/
-    padding: 0; /*Espaciado del cuerpo de la pagina*/
-    background-color: #f4f4f4; /*Color de fondo del cuerpo de la pagina*/
-    color: #000; /*Color del texto del cuerpo de la pagina*/
+    background-color: var(--colorbackground); /*Color de fondo del cuerpo de la pagina*/
 }
+
+/* Estilos para el pseudo-elemento ::before del body */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../Imagenes/Fondo_web.jpg) no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/*------------------------------------------------------------*/
+
+/*--------------------- Estilos del header --------------------*/
+/*Estilos para el contenedor del header*/
+header {
+    width: 90%; /*Ancho total del contenedor de la pagina*/
+    max-width: 1200px; /*Ancho máximo del contenido*/
+    margin: 0 auto; /*Centrar el contenido horizontalmente*/
+    text-align: center; /*Alinear el texto al centro*/
+    padding: 50px; /*Espaciado interno del contenedor*/
+    margin-top: 50px; /*Espaciado superiror del contenedor*/
+    margin-bottom: 100px; /*Espaciado inferior del contenedor*/
+}
+
+/*Estilos para el titulo del header*/
+header h1 {
+    /*Neones*/
+    text-shadow: var(--color-neon-cyan);
+    color: #79fbff; /*Color del titulo*/
+    font-size: 60px; /*Cambiar el tamaño de la fuente*/
+}
+
+/*Estilos para la información personal*/
+.hero__infoPersonal {
+    text-shadow: var(--color-neon-blanco);
+    color: #eaeaea; /*Color del titulo*/
+    font-size: 30px; /*Cambiar el tamaño de la fuente*/
+    margin-top: 18px; /*Espaciado inferior del titulo*/
+}
+
+/*Estilos para imagen de perfil*/
+#Image_profile {
+    width: 300px; /*Ancho de la imagen de 100 píxeles*/
+    height: auto; /*Altura automática para mantener la proporción*/
+    float: left; /*Posiciona la imagen*/
+    margin-top: -200px; /*Espaciado arriba de la imagen*/
+    margin-left: -100px; /*Espaciado izquierdo de la imagen*/
+    
+    border: 5px solid #fbbd2e; /*Agrega un borde*/
+    box-shadow: var(--color-neon-naranja); /*Agrega una sombra*/
+    padding: 10px; /*Añade un relleno de 10px alrededor de la imagen*/
+}
+
+/*------------------------------------------------------------*/
 
 /*------------------- Sección de preguntas -------------------*/
-/*Estilos para el contenedor del titulo*/
-.hero__title.container {
-    width: 95%; /*Ancho total del contenedor de la pagina*/
-    max-width: 1200x; /*Ancho máximo del contenido*/
-    margin: 0 auto; /*Centrar el contenido horizontalmente*/
-    padding: 20px; /*Espaciado interno del contenedor*/
-    margin-top: 50px; /*Espaciado inferior del contenedor*/
-}
-
 /*Estilos para el contenedor de preguntas*/
 .hero__preguntas.container {
-    width: 90%; /*Ancho total del contenedor de la pagina*/
-    max-width: 1200x; /*Ancho máximo del contenido*/
+    width: 80%; /*Ancho total del contenedor de la pagina*/
+    max-width: 1200px; /*Ancho máximo del contenido*/
     margin: 0 auto; /*Centrar el contenido horizontalmente*/
     padding: 40px; /*Espaciado interno del contenedor*/
     overflow-y: auto; /*Hacer que la altura sea desplazable*/
-    height: 100vh; /*Altura igual al 100% de la ventana del navegador*/
+    height: 90vh; /*Altura igual al 100% de la ventana del navegador*/
+    margin-bottom: 25px; /*Espaciado inferior*/
+    border: 5px solid #fbbd2e; /*Agrega un borde*/
+    box-shadow: var(--color-neon-naranja); /*Agrega una sombra*/
+}
+
+/*Estilos para la barra de desplazamiento en navegadores webkit*/
+::-webkit-scrollbar {
+    width: 15px; /*Ancho de la barra de desplazamiento*/
+}
+
+/*Estilos para el riel de la barra de desplazamiento*/
+::-webkit-scrollbar-track {
+    background-color: transparent; /*Color transparente para el riel*/
+}
+
+/*Estilos para el pulgar de la barra de desplazamiento*/
+::-webkit-scrollbar-thumb {
+    background-color: #2cd5c4; /*Color para el pulgar*/
+    box-shadow: var(--color-neon-cyan); /*Agrega una sombra al pulgar*/
+    border-radius: 10px; /*Borde redondeado para el pulgar*/
 }
 
 /*Estilos para el titulo de la sección de preguntas*/
-.hero__preguntas h1 {
+.hero__title__pregunta{
     font-size: 30px; /*Cambiar el tamaño de la fuente*/
-    color: #000; /*Color del texto*/
+    text-shadow: var(--color-neon-cyan);
+    color: #9aebf9; /*Color del texto*/
     text-align: center; /*Alinear el texto al centro*/
-    margin-bottom: 25px; /*Espaciado inferior del titulo*/
+    
 }
 
-.hero__preguntas h3 {
-    font-size: 25px; /*Cambiar el tamaño de la fuente*/
-    color: #000; /*Color del texto*/
+h3 {
+    font-size: 30px; /*Cambiar el tamaño de la fuente*/
+    text-shadow: var(--color-neon-cyan);
+    color: #9aebf9; /*Color del texto*/
     text-align: center; /*Alinear el texto al centro*/
-    margin-top: 20px; /*Espaciado superior del titulo*/
-    margin-bottom: 20px; /*Espaciado inferior del titulo*/
+    margin-top: 20px; /*Espaciado superior*/
 }
 
 /*Estilos para las preguntas*/
-.hero__preguntas {
-    font-size: 20px; /*Cambiar el tamaño de la fuente*/
-    margin-top: 10px; /*Espaciado superior*/
-}
-
-/*Estilos para las listas*/
-.hero__preguntas ul li {
-    font-size: 18px; /*Cambiar el tamaño de la fuente*/
-    margin-top: 10px; /*Espaciado superior*/
-}
-
-.hero__preguntas ol li {
-    font-size: 18px; /*Cambiar el tamaño de la fuente*/
-    margin-top: 10px; /*Espaciado superior*/
+.hero__pregunta {
+    font-size: 25px; /*Cambiar el tamaño de la fuente*/
+    text-shadow: var(--color-neon-blanco);
+    color: #eaeaea; /*Color del texto*/
+    margin-top: 30px; /*Espaciado superior*/
+    margin-bottom: 20px; /*Espaciado inferior*/
 }
 
 /*Estilos para las respuestas*/
 .hero__respuesta {
-    width: 90%; /*Ancho total del contenedor*/
-    margin: 0 auto; /*Centrar el contenido horizontalmente*/
     font-size: 18px; /*Cambiar el tamaño de la fuente*/
+    color: #fff; /*Color del texto*/
+    line-height: 1.5; /*Interlineado ajustado*/
     margin-top: 30px; /*Espaciado superior*/
+    margin-right: 30px; /*Espaciado derecho*/
+    margin-left: 30px; /*Espaciado izquierdo*/
+}
+
+/*Estilos para las listas*/
+.hero__lista {
+    font-size: 16px; /*Cambiar el tamaño de la fuente*/
+    color: #fff; /*Color del texto*/
+    line-height: 1.5; /*Interlineado ajustado*/
+    margin-top: 10px; /*Espaciado superior*/
     margin-bottom: 30px; /*Espaciado inferior*/
+    margin-right: 30px; /*Espaciado derecho*/
+    margin-left: 30px; /*Espaciado izquierdo*/
 }
 /*------------------------------------------------------------*/
 
 /*----------------------- Pie de pagina ----------------------*/
+/*Color del enlace*/
+a {
+    color: #fff; /*Color del enlace*/
+}
+/*Color del enlace cuando el cursor está sobre él*/
+a:hover {
+    color: #ffc845; /*Azul*/
+}
+/*Color del enlace cuando está siendo activado*/
+a:active {
+    color: #ff00ff; /* Magenta */
+}
+
 /*Estilos para el pie de pagina*/
 footer {
     width: 100%; /*Ancho total del pie de pagina*/
     font-size: 17px; /*Cambiar el tamaño de la fuente*/
-    background-color: #fff; /*Color de fondo del pie de pagina*/
-    color: #000; /*Color del texto del pie de pagina*/
+    color: #fff; /*Color del texto del pie de pagina*/
+    padding: 10px; /*Espaciado interno del pie de pagina*/
+    margin-bottom: 38px; /*Espaciado inferior del pie de pagina*/
+    text-align: center; /*Alinear el texto al centro*/
+}
+
+#IDE{
+    position: fixed; /*Fijar el pie de pagina en la parte inferior*/
+    width: 100%; /*Ancho total del pie de pagina*/
+    font-size: 17px; /*Cambiar el tamaño de la fuente*/
+    background-color: #000; /*Color de fondo del pie de pagina*/
+    color: #fff; /*Color del texto del pie de pagina*/
     text-align: center; /*Alinear el texto al centro*/
     padding: 10px; /*Espaciado interno del pie de pagina*/
-    
     bottom: 0; /*Alinear el pie de pagina en la parte inferior*/
 }
 /*------------------------------------------------------------*/
+
+/*------------------------ Estilos de Java -------------------*/
+/*Estilos para el contenedor de Java*/
+.hero__ejercicio__title {
+    font-size: 25px; /*Cambiar el tamaño de la fuente*/
+    text-shadow: var(--color-neon-blanco);
+    color: #fff; /*Color del texto*/
+    text-align: center; /*Alinear el texto al centro*/
+    margin-top: 20px; /*Espaciado superior*/
+}
+.hero__ejercicio {
+    font-size: 18px; /*Cambiar el tamaño de la fuente*/
+    color: #fff; /*Color del texto*/
+}

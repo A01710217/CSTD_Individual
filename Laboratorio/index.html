@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Poner caracteres raros -->
     <meta charset="UTF-8">
+    <!-- Indica al navegador que va a ser responsivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Titulo a la pestaña -->
     <title>Laboratorios Web</title>
@@ -10,189 +12,259 @@
     <!-- Estilos iguales a las paginas en navegadores (User agents) -->
     <link rel="stylesheet" href="./CSS/normalize.css">
     <!-- Estilos de css -->
-    <!--<link rel="stylesheet" href="./CSS/estilos.css"> -->
+    <link rel="stylesheet" href="./CSS/estilos.css">
     <!-- Estilos de css minimizados -->
-    <link rel="stylesheet" href="./CSS/estilos.min.css">
+    <!-- <link rel="stylesheet" href="./CSS/estilos.min.css"> -->
 </head>
 <body>
     <header class="hero">
         <section class="hero__title container">
-            <h1 class="hero__title">Laboratorio 1: Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
+            <h1 class="hero__title">Laboratorios</h1>
             <h3 class="hero__infoPersonal">Axel Camacho Villafuerte - A01710217</h3>
-        </section>
-
-        <section class="hero__preguntas container">
-            <h1 class="hero__title">Preguntas Lab 1</h1>
-            <p class="hero__pregunta">1.- <strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
-            <p class="hero__respuesta">
-                Internet es la infraestructura física que permite la comunicación a través de la red
-                mientras que la WWW es un conjunto de información y recursos accesibles a través de Internet.
-            </p>
-            <p class="hero__pregunta">2.- <strong>¿Cuáles son las partes de un URL?</strong></p>
-            <p class="hero__respuesta">
-                https://www.ejemplo.com/blog/articulo-1?param1=valor1&param2=valor2#etiqueta1
-            </p>
-            <!-- Para crear una lista no ordenada se usa <ul> -->
-            <ul class="hero__respuesta">
-                <li>Protocolo o Scheme (http, https)</li>
-                <li>Subdominio (WWW)</li>
-                <li>Dominio o Domain Name(ejemplo.com)</li>
-                <li>TLD (.com)</li>
-                <li>Ruta o Path(/blog/articulo-1)</li>
-                <li>Parámetros o Query Parameters (param1=valor1, param2=valor2)</li>
-                <li>Fragmento o Fragment (#etiqueta1)</li>
-            </ul>
-            <p class="hero__pregunta">3.- <strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></p>
-            <ul class="hero__respuesta">
-                <li>GET: Solicita datos de un recurso específico del servidor.</li>
-                <li>HEAD: Solicita los encabezados de un recurso específico del servidor.</li>
-                <li>POST: Envía datos para ser procesados a un recurso específico del servidor.</li>
-                <li>PUT: Reemplaza todos los datos de un recurso específico del servidor.</li>
-                <li>PATCH: Modifica parcialmente un recurso específico del servidor.</li>
-                <li>DELETE: Elimina un recurso específico del servidor.</li>
-            </ul>
-            <p class="hero__pregunta">4.- <strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</strong></p>
-            <p class="hero__respuesta">
-                Se debe utilizar el método POST, ya que los datos enviados no se mostrarán en la barra de direcciones del navegador ni en el historial de navegación, lo que los hace más seguros para enviar información sensible como contraseñas.
-            </p>
-            <p class="hero__pregunta">5.- <strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong></p>
-            <p class="hero__respuesta">
-                Se utiliza el método GET, el navegador solicita al servidor web que contiene la URL del recurso que se desea recuperar, y el servidor responde con el contenido del recurso solicitado, que luego se muestra en el navegador.
-            </p>
-            <p class="hero__pregunta">6.- <strong>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</strong></p>
-            <p class="hero__respuesta">
-                El código 200 significa que la solicitud fue exitosa, no ocurrió ningún error.
-            </p>
-            <p class="hero__pregunta">7.- <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></p>
-            <p class="hero__respuesta">
-                Sí, es responsabilidad del desarrollador corregir el error 404, ya que significa que el recurso solicitado no fue encontrado en el servidor, lo que puede ser causado por un error en la URL o por un recurso que fue eliminado o movido.
-            </p>
-            <p class="hero__pregunta">8.- <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong></p>
-            <p class="hero__respuesta">
-                Sí, es responsabilidad del desarrollador corregir el error 500, ya que significa que ocurrió un error interno en el servidor, lo que puede ser causado por un error en el código del servidor o por un problema con la configuración del servidor.  
-            </p>
-            <p class="hero__pregunta">9.- <strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></p>
-            <p class="hero__respuesta">
-                Significa que el atributo ya no se recomienda utilizar, ya que puede ser eliminado en futuras versiones de HTML. Algunos elementos de HTML 4 que en HTML5 están desaprobados algunos son: font, center, frame, frameset, noframes, big, strike, tt, acronym, applet, dir, isindex,basefont>, bgsound, menu, s, u.
-            </p>
-            <p class="hero__pregunta">10.- <strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></p>
-            <p class="hero__respuesta">HTML 4
-                <ul class="hero__respuesta">
-                    <li>No tiene soporte para audio y video</li>
-                    <li>No tiene soporte para gráficos vectoriales</li>
-                    <li>No tiene soporte para almacenamiento local</li>
-                    <li>no tiene soporte para geolocalización</li>
-                    <li>no tiene soporte para arrastrar y soltar</li>
-                    <li>no tiene soporte para notificaciones</li>
-                    <li>No tiene soporte para formularios semánticos</li>
-                </ul>
-            </p>
-            <p class=hero__respuesta>HTML 5
-                <ul class="hero__respuesta">
-                    <li>Tiene soporte para audio y video</li>
-                    <li>Tiene soporte para gráficos vectoriales</li>
-                    <li>Tiene soporte para almacenamiento local</li>
-                    <li>Tiene soporte para geolocalización</li>
-                    <li>Tiene soporte para arrastrar y soltar</li>
-                    <li>Tiene soporte para notificaciones</li>
-                    <li>Tiene soporte para formularios semánticos</li>
-                </ul>
-            </p>
-            <p class="hero__pregunta">11.- <strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong></p>
-            <p class="hero__respuesta">
-                Los componentes de estructura de una tabla son: table, tr, th, td, thead, tbody, tfoot, caption. 
-            </p>
-            <p class="hero__respuesta">
-                Los componentes de estilo de una tabla son: border, border-collapse, border-spacing, caption-side, empty-cells, table-layout.
-            </p>
-            <p class="hero__pregunta">12.- <strong>¿Cuáles son los principales controles de una forma HTML5?</strong></p>
-            <p class="hero__respuesta">
-                Los principales controles de una forma HTML5 son: input, textarea, select, button, datalist, fieldset, legend, label, output.
-            </p>
-            <p class="hero__pregunta">13.- <strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo:
-                <a href="https://html5test.co/">https://html5test.co/</a> 
-                (Al responder la pregunta recuerda poner el navegador que utilizas)</strong>
-                </p>
-            <p class="hero__respuesta">
-                El navegador que utilizo es Brave y tiene un soporte de 576/594 puntos.
-                A si mismo prove con edge y tiene un soporte de 581/594 puntos.
-            </p>
-            <h3 class="hero__secction__pregunta">Sobre el ciclo de vida y desarrollo de los sistemas de información:</h3>
-            <p class="hero__secction__pregunta">14.- <strong>¿Cuál es el ciclo de vida de los sistemas de información?</strong></p>
-            <p class="hero__secction__respuesta">
-                Es el periodo de vida que tiene un sistema desde el momento de planeación hasta el momento de su descontinuación. 
-                <!-- Para crear una lista ordenada se usa <ol> -->
-                <ol class="hero__respuesta">
-                    <li>Nace: cuando se comienza a detectar la oportunidad o nesesidad de crear u optimizar un sistema</li>
-                    <li>Desarolla o crece: cuando el sistema se diseña o se crea</li>
-                    <li>Produce: cuando se implementa, se prueba y se corrigen algunas fallas</li>
-                    <li>Muere: cuando el sistema ya no cumple las nesesidades, usa tecnología obsoleta o el sistema no se adapta a nuevas tecnologías</li>
-                </ol>
-            </p>
-            <p class="hero__secction__pregunta">15.- <strong>¿Cuál es el ciclo de desarrollo de sistemas de información?</strong></p>
-            <p class="hero__secction__respuesta">
-                El ciclo de desarrollo de sistemas de información es un marco que describe las etapas por las que pasa un sistema de información desde su concepción hasta su eventual desmantelamiento. 
-                <!-- Para crear una lista ordenada se usa <ol> -->
-                <ol class="hero__respuesta">
-                    <li>Planificación: Se determinan los requisitos del sistema.</li>
-                    <li>Análisis: Se realiza un estudio detallado de los requisitos del sistema y se diseña la arquitectura del sistema.</li>
-                    <li>Diseño del sistema: se diseñan las interfaces de usuario y se selecciona la base de datos.</li>
-                    <li>Implementación del sistema: se desarrolla el sistema de acuerdo con los diseños elaborados en la etapa de diseño.</li>
-                    <li>Pruebas del sistema: se llevan a cabo pruebas exhaustivas para garantizar que el sistema funcione correctamente y cumpla con los requisitos especificados.</li>
-                    <li>Mantenimiento del sistema: una vez que el sistema está en funcionamiento, se lleva a cabo su mantenimiento para corregir errores, mejorar el rendimiento y añadir nuevas funcionalidades según sea necesario.</li>
-                </ol>
-            </p>
-            <h1 class="hero__title">Preguntas Lab 2</h1>
-            <p class="hero__pregunta">1.- <strong>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</strong></p>
-            <p class="hero__respuesta">
-                !important es usado para sobrescribir cualquier estilo que se le aplique a un elemento, sin importar la especificidad del selector.
-                El uso de !important en CSS debe ser evitado siempre que sea posible, ya que puede causar problemas de mantenimiento y dificultar la comprensión del código. 
-                <!-- Para crear una lista no ordenada se usa <ol> -->
-                <ul class="hero__respuesta">
-                    <li>El uso excesivo de !important puede hacer que el código sea difícil de mantener y entender.</li>
-                    <li>El uso de !important puede causar problemas de especificidad en el código CSS, lo que puede llevar a conflictos y errores.</li>
-                    <li>El uso de !important puede hacer que sea difícil de sobrescribir estilos en el futuro.</li>
-                </ul>
-            </p>
-            <p class="hero__pregunta">2.- <strong>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</strong></p>
-            <p class="hero__respuesta">
-                La elección imagen de fondo inapropiada puede afectar la legibilidad del texto y la usabilidad de la página.
-                <!-- Para crear una lista no ordenada se usa <ul> -->
-                <ul class="hero__respuesta">
-                    <li>Una imagen de fondo puede tener un gran impacto en la apariencia y la percepción de la página web.</li>
-                    <li>Una imagen de fondo muy ocupada o con colores brillantes puede hacer que el texto sea difícil de leer.</li>
-                    <li>Una imagen de fondo muy grande puede aumentar el tiempo de carga de la página.</li>
-                    <li>Una imagen de fondo que no se repite correctamente puede causar problemas de diseño en la página.</li>
-                </ul>
-            </p>
-            <p class="hero__pregunta">3.- <strong>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</strong></p>
-            <!-- Para crear una lista no ordenada se usa <ul> -->
-            <ul class="hero__respuesta">
-                <li>Las unidades de porcentaje (%): son útiles para crear diseños que se adapten a un tamaño relativo.</li>
-                <li>Las unidades de píxeles (px): son útiles para crear diseños con tamaños fijos y precisos.</li>
-                <li>Las unidades de puntos (pt): son útiles para tamaños de texto y otros elementos que deben ser consistentes en diferentes dispositivos de visualización.</li>
-            </ul>
-            <p class="hero__pregunta">4.- <strong>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</strong></p>
-            <p class="hero__respuesta">
-                Reduce el tamaño del archivo: La versión minimizada del CSS elimina los espacios en blanco, los comentarios y otros caracteres no esenciales del código CSS.
-                <!-- Para crear una lista no ordenada se usa <ul> -->
-                <ul class="hero__respuesta">
-                    <li>Reduce el tamaño del archivo.</li>
-                    <li>Menor tiempo de transferencia.</li>
-                    <li>Menor uso de ancho de banda y el consumo de recursos del servidor.</li>
-                </ul>
-            </p>
-
+            <image src="./Imagenes/Image_profile.jpg" alt="Imagen Profile" id="Image_profile">
         </section>
     </header>
+
+    <section class="hero__preguntas container">
+        <h1 class="hero__title__pregunta">Preguntas Lab 1</h1>
+        <p class="hero__pregunta">1.- <strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
+        <p class="hero__respuesta">
+            Internet es la infraestructura física que permite la comunicación a través de la red
+            mientras que la WWW es un conjunto de información y recursos accesibles a través de Internet.
+        </p>
+        <p class="hero__pregunta">2.- <strong>¿Cuáles son las partes de un URL?</strong></p>
+        <p class="hero__respuesta">
+            https://www.ejemplo.com/blog/articulo-1?param1=valor1&param2=valor2#etiqueta1
+        </p>
+        <!-- Para crear una lista no ordenada se usa <ul> -->
+        <ul class="hero__lista">
+            <li>Protocolo o Scheme (http, https)</li>
+            <li>Subdominio (WWW)</li>
+            <li>Dominio o Domain Name(ejemplo.com)</li>
+            <li>TLD (.com)</li>
+            <li>Ruta o Path(/blog/articulo-1)</li>
+            <li>Parámetros o Query Parameters (param1=valor1, param2=valor2)</li>
+            <li>Fragmento o Fragment (#etiqueta1)</li>
+        </ul>
+        <p class="hero__pregunta">3.- <strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></p>
+        <ul class="hero__lista">
+            <li>GET: Solicita datos de un recurso específico del servidor.</li>
+            <li>HEAD: Solicita los encabezados de un recurso específico del servidor.</li>
+            <li>POST: Envía datos para ser procesados a un recurso específico del servidor.</li>
+            <li>PUT: Reemplaza todos los datos de un recurso específico del servidor.</li>
+            <li>PATCH: Modifica parcialmente un recurso específico del servidor.</li>
+            <li>DELETE: Elimina un recurso específico del servidor.</li>
+        </ul>
+        <p class="hero__pregunta">4.- <strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</strong></p>
+        <p class="hero__respuesta">
+            Se debe utilizar el método POST, ya que los datos enviados no se mostrarán en la barra de direcciones del navegador ni en el historial de navegación, lo que los hace más seguros para enviar información sensible como contraseñas.
+        </p>
+        <p class="hero__pregunta">5.- <strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong></p>
+        <p class="hero__respuesta">
+            Se utiliza el método GET, el navegador solicita al servidor web que contiene la URL del recurso que se desea recuperar, y el servidor responde con el contenido del recurso solicitado, que luego se muestra en el navegador.
+        </p>
+        <p class="hero__pregunta">6.- <strong>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</strong></p>
+        <p class="hero__respuesta">
+            El código 200 significa que la solicitud fue exitosa, no ocurrió ningún error.
+        </p>
+        <p class="hero__pregunta">7.- <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></p>
+        <p class="hero__respuesta">
+            Sí, es responsabilidad del desarrollador corregir el error 404, ya que significa que el recurso solicitado no fue encontrado en el servidor, lo que puede ser causado por un error en la URL o por un recurso que fue eliminado o movido.
+        </p>
+        <p class="hero__pregunta">8.- <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong></p>
+        <p class="hero__respuesta">
+            Sí, es responsabilidad del desarrollador corregir el error 500, ya que significa que ocurrió un error interno en el servidor, lo que puede ser causado por un error en el código del servidor o por un problema con la configuración del servidor.  
+        </p>
+        <p class="hero__pregunta">9.- <strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></p>
+        <p class="hero__respuesta">
+            Significa que el atributo ya no se recomienda utilizar, ya que puede ser eliminado en futuras versiones de HTML. Algunos elementos de HTML 4 que en HTML5 están desaprobados algunos son: font, center, frame, frameset, noframes, big, strike, tt, acronym, applet, dir, isindex,basefont>, bgsound, menu, s, u.
+        </p>
+        <p class="hero__pregunta">10.- <strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></p>
+        <p class="hero__respuesta">HTML 4
+            <ul class="hero__lista">
+                <li>No tiene soporte para audio y video</li>
+                <li>No tiene soporte para gráficos vectoriales</li>
+                <li>No tiene soporte para almacenamiento local</li>
+                <li>no tiene soporte para geolocalización</li>
+                <li>no tiene soporte para arrastrar y soltar</li>
+                <li>no tiene soporte para notificaciones</li>
+                <li>No tiene soporte para formularios semánticos</li>
+            </ul>
+        </p>
+        <p class=hero__respuesta>HTML 5
+            <ul class="hero__lista">
+                <li>Tiene soporte para audio y video</li>
+                <li>Tiene soporte para gráficos vectoriales</li>
+                <li>Tiene soporte para almacenamiento local</li>
+                <li>Tiene soporte para geolocalización</li>
+                <li>Tiene soporte para arrastrar y soltar</li>
+                <li>Tiene soporte para notificaciones</li>
+                <li>Tiene soporte para formularios semánticos</li>
+            </ul>
+        </p>
+        <p class="hero__pregunta">11.- <strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong></p>
+        <p class="hero__respuesta">
+            Los componentes de estructura de una tabla son: table, tr, th, td, thead, tbody, tfoot, caption. 
+        </p>
+        <p class="hero__respuesta">
+            Los componentes de estilo de una tabla son: border, border-collapse, border-spacing, caption-side, empty-cells, table-layout.
+        </p>
+        <p class="hero__pregunta">12.- <strong>¿Cuáles son los principales controles de una forma HTML5?</strong></p>
+        <p class="hero__respuesta">
+            Los principales controles de una forma HTML5 son: input, textarea, select, button, datalist, fieldset, legend, label, output.
+        </p>
+        <p class="hero__pregunta">13.- <strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo:
+            <a href="https://html5test.co/">https://html5test.co/</a> 
+            (Al responder la pregunta recuerda poner el navegador que utilizas)</strong>
+            </p>
+        <p class="hero__respuesta">
+            El navegador que utilizo es Brave y tiene un soporte de 576/594 puntos.
+            A si mismo prove con edge y tiene un soporte de 581/594 puntos.
+        </p>
+        <h3>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h3>
+        <p class="hero__pregunta">14.- <strong>¿Cuál es el ciclo de vida de los sistemas de información?</strong></p>
+        <p class="hero__respuesta">
+            Es el periodo de vida que tiene un sistema desde el momento de planeación hasta el momento de su descontinuación. 
+            <!-- Para crear una lista ordenada se usa <ol> -->
+            <ol class="hero__lista">
+                <li>Nace: cuando se comienza a detectar la oportunidad o nesesidad de crear u optimizar un sistema</li>
+                <li>Desarolla o crece: cuando el sistema se diseña o se crea</li>
+                <li>Produce: cuando se implementa, se prueba y se corrigen algunas fallas</li>
+                <li>Muere: cuando el sistema ya no cumple las nesesidades, usa tecnología obsoleta o el sistema no se adapta a nuevas tecnologías</li>
+            </ol>
+        </p>
+        <p class="hero__pregunta">15.- <strong>¿Cuál es el ciclo de desarrollo de sistemas de información?</strong></p>
+        <p class="hero__respuesta">
+            El ciclo de desarrollo de sistemas de información es un marco que describe las etapas por las que pasa un sistema de información desde su concepción hasta su eventual desmantelamiento. 
+            <!-- Para crear una lista ordenada se usa <ol> -->
+            <ol class="hero__lista">
+                <li>Planificación: Se determinan los requisitos del sistema.</li>
+                <li>Análisis: Se realiza un estudio detallado de los requisitos del sistema y se diseña la arquitectura del sistema.</li>
+                <li>Diseño del sistema: se diseñan las interfaces de usuario y se selecciona la base de datos.</li>
+                <li>Implementación del sistema: se desarrolla el sistema de acuerdo con los diseños elaborados en la etapa de diseño.</li>
+                <li>Pruebas del sistema: se llevan a cabo pruebas exhaustivas para garantizar que el sistema funcione correctamente y cumpla con los requisitos especificados.</li>
+                <li>Mantenimiento del sistema: una vez que el sistema está en funcionamiento, se lleva a cabo su mantenimiento para corregir errores, mejorar el rendimiento y añadir nuevas funcionalidades según sea necesario.</li>
+            </ol>
+        </p>
+        <h1 class="hero__title__pregunta">Preguntas Lab 3</h1>
+        <p class="hero__pregunta">1.- <strong>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</strong></p>
+        <p class="hero__respuesta">
+            !important es usado para sobrescribir cualquier estilo que se le aplique a un elemento, sin importar la especificidad del selector.
+            El uso de !important en CSS debe ser evitado siempre que sea posible, ya que puede causar problemas de mantenimiento y dificultar la comprensión del código. 
+            <!-- Para crear una lista no ordenada se usa <ol> -->
+            <ul class="hero__lista">
+                <li>El uso excesivo de !important puede hacer que el código sea difícil de mantener y entender.</li>
+                <li>El uso de !important puede causar problemas de especificidad en el código CSS, lo que puede llevar a conflictos y errores.</li>
+                <li>El uso de !important puede hacer que sea difícil de sobrescribir estilos en el futuro.</li>
+            </ul>
+        </p>
+        <p class="hero__pregunta">2.- <strong>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</strong></p>
+        <p class="hero__respuesta">
+            La elección imagen de fondo inapropiada puede afectar la legibilidad del texto y la usabilidad de la página.
+            <!-- Para crear una lista no ordenada se usa <ul> -->
+            <ul class="hero__lista">
+                <li>Una imagen de fondo puede tener un gran impacto en la apariencia y la percepción de la página web.</li>
+                <li>Una imagen de fondo muy ocupada o con colores brillantes puede hacer que el texto sea difícil de leer.</li>
+                <li>Una imagen de fondo muy grande puede aumentar el tiempo de carga de la página.</li>
+                <li>Una imagen de fondo que no se repite correctamente puede causar problemas de diseño en la página.</li>
+            </ul>
+        </p>
+        <p class="hero__pregunta">3.- <strong>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</strong></p>
+        <!-- Para crear una lista no ordenada se usa <ul> -->
+        <ul class="hero__lista">
+            <li>Las unidades de porcentaje (%): son útiles para crear diseños que se adapten a un tamaño relativo.</li>
+            <li>Las unidades de píxeles (px): son útiles para crear diseños con tamaños fijos y precisos.</li>
+            <li>Las unidades de puntos (pt): son útiles para tamaños de texto y otros elementos que deben ser consistentes en diferentes dispositivos de visualización.</li>
+        </ul>
+        <p class="hero__pregunta">4.- <strong>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</strong></p>
+        <p class="hero__lista">
+            Reduce el tamaño del archivo: La versión minimizada del CSS elimina los espacios en blanco, los comentarios y otros caracteres no esenciales del código CSS.
+            <!-- Para crear una lista no ordenada se usa <ul> -->
+            <ul class="hero__lista">
+                <li>Reduce el tamaño del archivo.</li>
+                <li>Menor tiempo de transferencia.</li>
+                <li>Menor uso de ancho de banda y el consumo de recursos del servidor.</li>
+            </ul>
+        </p>
+        <h1 class="hero__title__pregunta">Preguntas Lab 4</h1>
+        <p class="hero__pregunta">1.- <strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong></p>
+        <!-- Para crear una lista no ordenada se usa <ul> -->
+        <ul class="hero__lista">
+            <li>Java es un lenguaje de programación de propósito general que se utiliza para desarrollar aplicaciones de escritorio, aplicaciones web, aplicaciones móviles, mientras que JavaScript es un lenguaje de programación de alto nivel que se utiliza principalmente para desarrollar aplicaciones web interactivas.</li>
+            <li>Java es un lenguaje de programación orientado a objetos, mientras que JavaScript es un lenguaje de programación basado en prototipos.</li>
+            <il>Java es un lenguaje de programación estáticamente tipado, mientras que es un lenguaje de programación dinámicamente tipado</il>
+            <li>Java se compila en bytecode que se ejecuta en la máquina virtual de Java (JVM), mientras que JavaScript se interpreta en el navegador web.</li>
+            <li>Java es un lenguaje de programación más antiguo que JavaScript, y tiene una sintaxis y características diferentes.</li>
+        </ul>
+        <p class="hero__pregunta">2.- <strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong></p>
+        <!-- Para crear una lista no ordenada se usa <ul> -->
+        <ul class="hero__lista">
+            <li>getDate(): Devuelve el día del mes de la fecha especificada.</li>
+            <li>getDay(): Devuelve el día de la semana de la fecha especificada.</li>
+            <li>getMonth(): Devuelve el mes de la fecha especificada.</li>
+            <li>getFullYear(): Devuelve el año de la fecha especificada.</li>
+            <li>getHours(): Devuelve la hora de la fecha especificada.</li>
+            <li>getMinutes(): Devuelve los minutos de la fecha especificada.</li>
+            <li>getMilliseconds(): Devuelve los milisegundos de la fecha especificada.</li>
+            <li>getSeconds(): Devuelve los segundos de la fecha especificada.</li>
+            <li>getTime(): Devuelve el número de milisegundos desde la medianoche del 1 de enero de 1970.</li>
+            <li>getUTCDate(): Devuelve el día del mes de la fecha especificada, según la hora universal.</li>
+            <li>getUTCDay(): Devuelve el día de la semana de la fecha especificada, según la hora universal.</li>
+            <li>getUTCFullYear(): Devuelve el año de la fecha especificada, según la hora universal.</li>
+            <li>getUTCHours(): Devuelve la hora de la fecha especificada, según la hora universal.</li>
+            <li>getUTCMilliseconds(): Devuelve los milisegundos de la fecha especificada, según la hora universal.</li>
+            <li>getUTCMinutes(): Devuelve los minutos de la fecha especificada, según la hora universal.</li>
+            <li>getUTCMonth(): Devuelve el mes de la fecha especificada, según la hora universal.</li>
+            <li>getUTCSeconds(): Devuelve los segundos de la fecha especificada, según la hora universal.</li>
+            <li>getTimezoneOffset(): Retona la diferencia horaria en minutos para la hora local.</li>
+        </ul>
+        <p class="hero__pregunta">3.- <strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong></p>
+        <!-- Para crear una lista no ordenada se usa <ul> -->
+        <ul class="hero__lista">
+            <li>push(): Añade uno o más elementos al final de un arreglo.</li>
+            <li>pop(): Elimina el último elemento de un arreglo.</li>
+            <li>unshift(): Añade al principio del arreglo</li>
+            <li>shift(): Elimina el primer elemento de un arreglo.</li>
+            <li>indexOf(): Devuelve el índice en el que se encuentra un elemento dado en el arreglo.</li>
+            <li>splice(): Eliminar elemento mediante mediante la posición.</li>
+            <li>slice(): Devuelve una copia de una parte del arreglo.</li>
+            <li>find(): Devuelve el valor del primer elemento de un arreglo que cumple con la función de prueba dada.</li>
+            <li>findIndex(): Devuelve el índice del primer elemento de un arreglo que cumple con la función de prueba dada.</li>
+            <li>forEach(): Ejecuta una función dada una vez por cada elemento del arreglo.</li>
+        </ul>
+        <p class="hero__pregunta">4.- <strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong></p>
+        <p class="hero__respuesta">
+            Una variable con alcance local dentro de una función se declara utilizando la palabra clave var, let o const, seguida del nombre de la variable y opcionalmente de un valor inicial.
+        </p>
+        <p class="hero__respuesta">
+            Nota: Usar let o const en lugar de var es una buena práctica, ya que let y const tienen un alcance de bloque, mientras que var tiene un alcance de función.
+        </p>
+        <p class="hero__pregunta">5.- <strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong></p>
+        <!-- Para crear una lista no ordenada se usa <ul> -->
+        <ul class="hero__lista">
+            <li>Las variables globales pueden ser modificadas por cualquier parte del código, lo que puede llevar a comportamientos inesperados y errores difíciles de rastrear.</li>
+            <li>Las variables globales pueden ser sobrescritas por accidente, lo que puede causar problemas en otras partes del código.</li>
+            <li>Las variables globales pueden hacer que el código sea menos modular y reutilizable, ya que las funciones que dependen de variables globales pueden ser más difíciles de reutilizar en otros contextos.</li>
+        </ul>
+        <h3>Ejercicios</h3>
+        <!-- Java script, si modifica la pagina -->
+        <script src="./JS/script.js"></script>
+    </section>
 
     <!-- Pie de pagina -->
     <footer class="footer">
         <!-- Redireccionar a sitio web -->
-        <p class="footer__paragraph"><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
-        <p class="footer__paragraph"><a href="https://chat.openai.com/">https://chat.openai.com/</a></p>
-        <p class="footer__paragraph"><a href="https://gemini.google.com/">https://gemini.google.com/</a></p>
+        <p id="IDE">Esta pagina esta hecha con: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+        <p>Referencias: </p>
+        <p><a href="https://chat.openai.com/">https://chat.openai.com/</a></p>
+        <p><a href="https://gemini.google.com/">https://gemini.google.com/</a></p>
+        <p><a href="https://www.toptal.com/developers/cssminifier">https://www.toptal.com/developers/cssminifier</a></p>
+        <p><a href="https://www.bing.com/chat?q=Bing+AI&FORM=hpcodx">https://www.bing.com/chat?q=Bing+AI&FORM=hpcodx</a></p>
+        <p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date</a></p>
+        <p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array</a></p>
+        <p><a href="https://necolas.github.io/normalize.css/">https://necolas.github.io/normalize.css/</a></p>
     </footer>
+
 <!-- Optimizar pagina 1ms, eliminar -->
 </body>
 </html>
