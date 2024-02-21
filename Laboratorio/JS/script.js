@@ -2,7 +2,7 @@ function generarTabla() {
     document.write('<p class="hero__ejercicio__title">Ejercicio 1</p>');
     let numero = parseInt(prompt('Ingrese un número a calcular sus cuadrados y cubos:'));
     document.write('<table class="hero__ejercicio", border="5">');
-    document.write('<tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>');
+    document.write('<tr class="highlight"><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>');
     for (let i = 1; i <= numero; i++) {
         let cuadrado = i * i;
         let cubo = i * i * i;
@@ -142,6 +142,9 @@ class Rectangulo {
     }
 }
 document.write('<p class="hero__ejercicio__title">Ejercicio 6</p>');
+document.write('<p class="hero__ejercicio">Cálculo del perímetro y área de un rectángulo</p>');
+document.write('<p class="hero__ejercicio">La clase Rectangulo define un rectángulo con una base y una altura, y proporciona métodos para calcular su perímetro y área.</p>');
+document.write('<p class="hero__ejercicio">El usuario proporciona la base y la altura del rectángulo a través de un cuadro de diálogo de entrada (prompt en este caso). Luego, se crea un objeto Rectangulo con estos valores y se utilizan los métodos calcularPerimetro y calcularArea para obtener el perímetro y el área del rectángulo, respectivamente.</p>');
 base = parseInt(prompt('Ingrese la base del rectángulo: '));
 altura = parseInt(prompt('Ingrese la altura del rectángulo: '));
 let rectangulo = new Rectangulo(base, altura); //Creación de un objeto de la clase Rectángulo

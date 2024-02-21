@@ -70,44 +70,32 @@ body::before {
 /*------------------------------------------------------------*/
 
 /*--------------------- Estilos del header --------------------*/
-/*Estilos para el contenedor del header*/
-header {
-    width: 90%; /*Ancho total del contenedor de la pagina*/
-    max-width: 1200px; /*Ancho máximo del contenido*/
-    margin: 0 auto; /*Centrar el contenido horizontalmente*/
-    text-align: center; /*Alinear el texto al centro*/
-    padding: 50px; /*Espaciado interno del contenedor*/
-    margin-top: 50px; /*Espaciado superiror del contenedor*/
-    margin-bottom: 100px; /*Espaciado inferior del contenedor*/
-}
-
 /*Estilos para el titulo del header*/
 header h1 {
     /*Neones*/
     text-shadow: var(--color-neon-cyan);
     color: #79fbff; /*Color del titulo*/
     font-size: 60px; /*Cambiar el tamaño de la fuente*/
+    text-align: center; /*Alinear el texto al centro*/
 }
 
 /*Estilos para la información personal*/
 .hero__infoPersonal {
     text-shadow: var(--color-neon-blanco);
     color: #eaeaea; /*Color del titulo*/
-    font-size: 30px; /*Cambiar el tamaño de la fuente*/
-    margin-top: 18px; /*Espaciado inferior del titulo*/
+    font-size: 25px; /*Cambiar el tamaño de la fuente*/
+    margin-left: 200px; /*Espaciado izquierdo*/
+    margin-right: 200px; /*Espaciado derecho*/
 }
 
 /*Estilos para imagen de perfil*/
 #Image_profile {
-    width: 300px; /*Ancho de la imagen de 100 píxeles*/
+    width: 150px; /*Ancho de la imagen de 100 píxeles*/
     height: auto; /*Altura automática para mantener la proporción*/
-    float: left; /*Posiciona la imagen*/
-    margin-top: -200px; /*Espaciado arriba de la imagen*/
-    margin-left: -100px; /*Espaciado izquierdo de la imagen*/
-    
     border: 5px solid #fbbd2e; /*Agrega un borde*/
     box-shadow: var(--color-neon-naranja); /*Agrega una sombra*/
     padding: 10px; /*Añade un relleno de 10px alrededor de la imagen*/
+    margin-top: -220px; /*Espaciado superior*/
 }
 
 /*------------------------------------------------------------*/
@@ -121,6 +109,7 @@ header h1 {
     padding: 40px; /*Espaciado interno del contenedor*/
     overflow-y: auto; /*Hacer que la altura sea desplazable*/
     height: 90vh; /*Altura igual al 100% de la ventana del navegador*/
+    margin-top: 50px; /*Espaciado superior*/
     margin-bottom: 25px; /*Espaciado inferior*/
     border: 5px solid #fbbd2e; /*Agrega un borde*/
     box-shadow: var(--color-neon-naranja); /*Agrega una sombra*/
