@@ -4,6 +4,7 @@ const mostarPreguntas = document.getElementById('seccion-preguntas');
 const buttonPreguntas = document.getElementById('preguntas');
 const buttonValidar = document.getElementById('button');
 let barraFuerza = document.getElementById('barra-seguridad');
+let fuerza = 0;
 
 function nivelSeguridad() {
     let mayuscula = /[A-Z]+/;
@@ -11,7 +12,6 @@ function nivelSeguridad() {
     let numero = /[0-9]+/;
     let charact = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
-    let fuerza = 0;
     if (passwordInput.value.length >= 8) {
         fuerza += 1;
     }
@@ -57,11 +57,14 @@ function nivelSeguridad() {
 }
 
 function validar() {
-    if(passwordInput.value === confirmPasswordInput.value) {
-        alert('La contraseña coincide con la confirmación');
+    if (passwordInput.value === "" || confirmPasswordInput.value === "") {
+        alert('Por favor, rellene todos los campos.');
+    } else if (passwordInput.value !== confirmPasswordInput.value) {
+        alert('Las contraseñas no coinciden.');
+    } else if (fuerza < 5) {
+        alert('Contraseña no segura.');
     } else {
-        alert('La contraseña no coincide con la confirmación');
-    }
+        alert('Contraseña segura.');}
 }
 
 function mostrarPreguntas() {
