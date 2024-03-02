@@ -11,20 +11,25 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
     <!-- Estilos -->
     <link rel="stylesheet" href="./CSS/estilos.css">
+
 </head>
 
 <body>
     <div class="contraseña container">
         <h1>Validar Contraseña</h1>
+        <!-- etiqueta from para inputs -->
         <form id="password-form" name="Validacion">
+            <!-- for es para clicear el nombre  -->
             <label for="password">Contraseña:</label><br>
             <input type="password" id="password" oninput="nivelSeguridad()"><br>
             <div>
                 <div id="barra-seguridad"></div>
             </div>
             <p id="nivel-seguridad"></p>
+            
             <label for="confirm-password">Confirmar contraseña:</label><br>
             <input type="password" id="confirm-password"><br>
+            <!-- type="submit" Eviar datos de los inputs del formaulario -->
             <button type="submit" id="button" onclick="validar()">Click validar</button>
         </form>
     </div>
