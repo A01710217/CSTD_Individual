@@ -10,23 +10,23 @@ function nivelSeguridad() {
     let mayuscula = /[A-Z]+/;
     let minuscula = /[a-z]+/;
     let numero = /[0-9]+/;
-    let charact = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-
+    let charact = /[!@#$%^&*()_+\-\=\;':"\|,.<>\/?]+/;        
     if (passwordInput.value.length >= 8) {
         fuerza += 1;
     }
-    if (mayuscula.test(passwordInput.value)) {
+    if (passwordInput.value.match(mayuscula)) {
         fuerza += 1;
     }
-    if (minuscula.test(passwordInput.value)) {
+    if (passwordInput.value.match(minuscula)) {
         fuerza += 1;
     }
-    if (numero.test(passwordInput.value)) {
+    if (passwordInput.value.match(numero)) {
         fuerza += 1;
     }
-    if (charact.test(passwordInput.value)) {
+    if (passwordInput.value.match(charact)) {
         fuerza += 1;
     }
+    
 
     //Actualizar el estilo de las barras de acuerdo a la fuerza
     if (fuerza === 1) {
@@ -61,10 +61,14 @@ function validar() {
         alert('Por favor, rellene todos los campos.');
     } else if (passwordInput.value !== confirmPasswordInput.value) {
         alert('Las contraseñas no coinciden.');
-    } else if (fuerza < 5) {
-        alert('Contraseña no segura.');
     } else {
-        alert('Contraseña segura.');}
+            let widthValue = parseFloat(barraFuerza.style.width);
+            if (widthValue < 60) {
+                alert('Contraseña no segura.');
+            } else {
+                alert('Contraseña correcta y segura.');
+            }
+    }
 }
 
 function mostrarPreguntas() {

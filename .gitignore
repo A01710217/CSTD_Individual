@@ -1,7 +1,7 @@
 #Ignorar archivos
 node_modules/
 dist/
-CSS/
+Laboratorio10/CSS/
 Imagenes/
 Laboratorio10/JS/script.js
-index.html
+Laboratorio10/index.html
