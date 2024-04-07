@@ -45,4 +45,8 @@ module.exports = class Producto {
     static search(valor_busqueda) {
         return db.execute('SELECT * FROM producto WHERE nombre LIKE ? OR precio = ? OR descripcion LIKE ?', ['%' + valor_busqueda + '%', valor_busqueda, valor_busqueda]);
     }
+
+    static eliminar(IDProducto) {
+        return db.execute('DELETE FROM Producto WHERE IDProducto = ?', [IDProducto]);
+    }
 }

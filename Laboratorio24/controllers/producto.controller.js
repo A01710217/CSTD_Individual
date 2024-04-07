@@ -16,6 +16,7 @@ exports.get_modificar = (request, response, next) => {
     });
 }
 
+//Metodos con Ajax
 exports.post_modificar = (request, response, next) => {
     Producto.fetch(request.params.producto_id).then(([rows, fieldData]) => {
         let producto = new Producto(0, request.body.nombre_producto, request.body.precio_producto, request.body.descripcion_producto, request.body.imagen_producto)
@@ -23,6 +24,16 @@ exports.post_modificar = (request, response, next) => {
         response.redirect('/')
     })
     .catch((error) => {
+        console.log(error);
+    });
+}
+
+exports.post_eliminar = (request, response, next) => {
+    Producto.eliminar(request.body.id).then(() => {
+        return Producto.fetchAll();
+    }).then(([rows, fieldData]) => {
+        return response.status(200).json({productos: rows});
+    }).catch((error) => {
         console.log(error);
     });
 }
@@ -92,6 +103,7 @@ exports.get_root = (request, response, next) => {
             ultimo_producto: request.cookies.ultimo_producto || '',
             nombreUsuario: request.session.username || '',
             permisos: request.session.permisos || [],
+            csrfToken: request.csrfToken(),
         });
     })
     .catch((error) => {

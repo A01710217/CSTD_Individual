@@ -9,9 +9,12 @@ router.get('/modificar/:producto_id', isAuth, productosController.get_modificar)
 
 router.post('/modificar/:producto_id', isAuth, productosController.post_modificar);
 
+
 router.get('/buscar/:valor_busqueda', isAuth, productosController.get_buscar);
 
 router.get('/buscar/', isAuth, productosController.get_buscar);
+
+router.post('/eliminar', isAuth, productosController.post_eliminar);
 
 router.get('/validar-contrasiena', isAuth, productosController.get_validar_contrasiena);
 

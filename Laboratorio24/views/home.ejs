@@ -3,7 +3,11 @@
     permisos : permisos
   }) %>
 
+<input type="hidden" id="_csrf" name="_csrf" value="<%= csrfToken %>">
 <input id="buscar" class="input is-info" type="text" placeholder="Buscar..."/><br><br>
+
+<div id="notification"></div>
+
 <div id="busqueda_ajax">
     <div class="columns">
 
@@ -45,6 +49,13 @@
                                     </div>
                                     <div class="column">
                                         <p class="is-size-6 quantity" id="quantity_<%= i %>"><%= productos[i].cantidad %></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <p class="control">
+                                            <button onclick="eliminar(<%= productos[i].IDProducto %>)" class="button is-danger">Delete post</button>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -113,6 +124,13 @@
                                         <div class="column">
                                             <p class="is-size-6 quantity" id="quantity_${i}">${data.productos[i].cantidad}</p>
                                         </div>
+                                        <div>
+                                            <div>
+                                                <p class="control">
+                                                    <button onclick="eliminar(${data.productos[i].IDProducto})" class="button is-danger">Delete post</button>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +139,7 @@
                 }
         
                 html += `</div>`;
-                document.getElementById('busqueda_ajax').innerHTML = html; 
+                document.getElementById('busqueda_ajax').innerHTML = html;
                 
             }).catch((err) => {
                 console.log(err);
@@ -129,6 +147,90 @@
             };
         
             document.getElementById('buscar').onkeyup = accion_asincrona;
+
+            const eliminar = (id) => {
+                const csrf = document.getElementById('_csrf').value;
+
+                fetch('/eliminar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'CSRF-Token': csrf
+                    },
+                    body: JSON.stringify({id: id})
+                }).then(result => {
+                    return result.json();
+                }).then(data => {
+                    console.log(data);
+                    let html = ``;
+        
+                    for (let i = 0; i < data.productos.length; i++) {
+                        if (i % 3 == 0){ 
+                            html += `
+                            </div>
+                            <div class="columns">`;
+                        }
+                        html += ` 
+                        <div class="column is-one-third">
+                            <div class="card has-background-info-light">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="/uploads/${data.productos[i].url}" alt="${data.productos[i].nombre}">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <a href="/modificar/${data.productos[i].IDProducto}">
+                                                <p class="title is-4" id="name_${i}">${data.productos[i].nombre} </p>
+                                            </a>
+                                            <p class="subtitle is-6">$<span id="price_${i}">${data.productos[i].precio}</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p>Lo que tienes que saber de este producto:</p>
+                                        <p>${data.productos[i].descripcion}</p>
+                                        <p class="subtitle is-4">Cantidad</p>
+                                        <div class="columns">
+                                            <div class="column is-one-fifth">
+                                                <button class="button is-small is-dark" id="sum_button_${i}">+</button>
+                                            </div>
+                                            <div class="column is-one-fifth">
+                                                <a href="${data.productos[i].url}">
+                                                    <button class="button is-small is-dark" id="substract_button_${i}">-</button>
+                                                </a>
+                                            </div>
+                                            <div class="column">
+                                                <p class="is-size-6 quantity" id="quantity_${i}">${data.productos[i].cantidad}</p>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <p class="control">
+                                                        <button onclick="eliminar(${data.productos[i].IDProducto})" class="button is-danger">Delete post</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                    }
+
+                    html += `</div>`;
+
+                    document.getElementById('busqueda_ajax').innerHTML = html;
+
+                    document.getElementById('notification').innerHTML = `
+                    <div class="notification is-primary">
+                        <button class="delete"></button>
+                        El producto fue eliminado.
+                    </div>`;
+
+                }).catch((err) => {
+                    console.log(err);
+                });
+            };
         </script>
 </div>
 
