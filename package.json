@@ -4,7 +4,7 @@
   "description": "Carpeta de laboratorios para CSTD",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon Laboratorio22/app.js",
+    "start": "nodemon Laboratorio24/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

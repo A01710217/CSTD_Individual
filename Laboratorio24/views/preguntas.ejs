@@ -1,0 +1,78 @@
+<%- include('includes/head.ejs', {
+    nombreUsuario: nombreUsuario,
+    permisos : permisos
+  }) %>
+
+<section class="container mt-6 content is-normal">
+    <h2 class="is-size-4">Preguntas</h2>
+    <h3 class="is-size-5 has-text-weight-bold mt-3">
+        ¿Cuáles fueron los componentes AJAX que utilizaste.
+    </h3>
+    <p>
+        El componente utilizado es fetch, lo cual, realiza solicitudes asincronas de HTTP en JavaScript. Realiza una solicitud de red y devuelve una promesa cuando la solicitud sea completa 
+    </p>
+    <h3 class="is-size-5 has-text-weight-bold mt-3">
+        AJAX es fundamental en el desarrollo de RIAs (Rich Internet Applications) debido a sus beneficios que permiten mejorar la experiencia del usuario y la interactividad de las aplicaciones web. Algunos de los beneficios de AJAX en el desarrollo de RIAs son: 
+    </h3>
+
+    <ul>
+        <li>
+            <p>
+                Los usuarios pueden interactuar con la aplicación sin tener que esperar a que se recargue toda la página
+            </p>
+        </li>
+        <li>
+            <p>
+                Las partes específicas de la página pueden actualizarse de manera dinámica y rápida sin necesidad de recargar todo el contenido
+            </p>
+        </li>
+        <li>
+            <p>
+                Permite cargar solo la información necesaria desde el servidor.
+            </p>
+        </li>
+        <li>
+            <p>
+                Puede ayudar a reducir la carga en el servidor y mejorar el rendimiento general de la aplicación
+            </p>
+        </li>
+    </ul> 
+    <h3 class="is-size-5 has-text-weight-bold mt-3">
+        ¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?
+    </h3>
+    <ul>
+        <li>
+            <p>
+                Vulnerabilidad a ataques CSRF (Cross-Site Request Forgery): Las solicitudes AJAX pueden ser vulnerables a ataques CSRF si no se implementan medidas de seguridad adecuadas, como tokens CSRF para verificar la autenticidad de las solicitudes.
+            </p>
+        </li>
+        <li>
+            <p>
+                Exposición de datos sensibles: Si no se manejan adecuadamente, las solicitudes AJAX podrían exponer datos sensibles del lado del servidor, como información de la base de datos o credenciales de acceso.
+            </p>
+        </li>
+        <li>
+            <p>
+                Validación de entrada: Es importante validar cualquier entrada de datos que provenga del lado del cliente antes de procesarla en el servidor para prevenir ataques como inyección de código o XSS (Cross-Site Scripting).
+            </p>
+        </li>
+        <li>
+            <p>
+                Acceso no autorizado: Las solicitudes AJAX podrían ser utilizadas para realizar acciones no autorizadas si no se implementan controles de acceso adecuados en el lado del servidor.
+            </p>
+        </li>
+    </ul>
+    <p>
+        Las validaciones de seguridad se hacen del lado del servidor, esto garantiza una aplicación segura y resistente a ataques. Debido a que el código de Js (Java Script) del lado del cliente puede ser manipulado fácilmente por un atacante.
+    </p> 
+
+    <h3 class="is-size-5 has-text-weight-bold mt-3">
+        ¿Qué es JSON?
+    </h3>
+    <p>
+        JSON o JavaScript Object Notation es un formato de intercambio de datos ligero y fácil de leer que se utiliza comúnmente para enviar y recibir datos entre aplicaciones. JSON se basa en la sintaxis de objetos de JavaScript, en palabras más simples, es una forma de representar datos estructurados utilizando texto plano.    
+    </p>
+    
+</section>
+
+<%- include('includes/foot.ejs') %>
