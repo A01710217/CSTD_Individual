@@ -1,15 +1,15 @@
 Apple iPhone 15 Pro 6.7-inch
-10000
+7000
 undefined
 https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845702708
 
 Computadora Portátil AceMagic
-10000
+5000
 undefined
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cyVYick1IZP-wCTYOcR0Sa70I2_KcSXZCw&usqp=CAU
 
 Xbox Series S
-8500
+8000
 undefined
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzRDnf9c617c4TM_V1cmrmG4uJ3EsDI_I-Pw&usqp=CAU
 
@@ -68,8 +68,13 @@ Casco del Jefe maestro
 undefined
 https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRHhT-b6I5djSY7gfYLojcTusK8MMXsmXZEN88iU7k7N8m13iwscYT9u7HuxOW4-ziIe2rkAC9FNPvmJYCwo4ZepWKkiWhnlRgN3v7yF-DUINibdFDj2xViB49Tlmxm2saWEgEWa4OqZOc&usqp=CAc
 
-Lucas
+Calacachida
+1500
+undefined
+Fondo_Esqueleto1.jpeg
+
+Flores amarillas
 15
 undefined
-data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhIWFhUXGRsaGBgWFxseHhccFxoYHx0eGhobHSgiIBolHhgYIjIhJSkrLi4uGB8zODMuNyotLisBCgoKDg0OGxAQGy0lICUvLS01LS0tLy0tLS8tMi0tKy0tLS0tLS0tLS0tLS0tLS0tLS0vLy0tLi0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcDBAUCAQj/xABIEAACAQIDBQUEBwQGCQUAAAABAgMAEQQSIQUTMUFRBgciYXEygZGhFCNCUnKSsWKCwfAXM1SisuEIFSVTY3OT0dQWJEODwv/EABoBAQADAQEBAAAAAAAAAAAAAAACAwQBBQb/xAA3EQABAwEEBggFBAMBAAAAAAABAAIRAwQSITETQVFhcdEUIoGRobHB8AUyUpLhI0Jig
+1712448220306Bace flores amarillas.jfif
 

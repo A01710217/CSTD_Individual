@@ -6,6 +6,7 @@ exports.get_resenia = (request, response, next) => {
             resenias: rows,
             nombreUsuario: request.session.username || '',
             csrfToken: request.csrfToken(),
+            permisos: request.session.permisos || [],
         });
     })
     .catch((error) => {

@@ -7,6 +7,7 @@ exports.get_modificar = (request, response, next) => {
         response.render('modificar', {
             nombreUsuario: request.session.username || '',
             producto: rows,
+            permisos: request.session.permisos || [],
             csrfToken: request.csrfToken(),
         });
     })
@@ -29,6 +30,7 @@ exports.post_modificar = (request, response, next) => {
 exports.get_validar_contrasiena = (request, response, next) => {
     response.render('validador', {
         nombreUsuario: request.session.username || '',
+        permisos: request.session.permisos || [],
         csrfToken: request.csrfToken(),
     });
 }
@@ -44,12 +46,14 @@ exports.post_validar_contrasiena = (request, response, next) => {
 exports.get_agregar = (request, response, next) => {
     response.render('agregar', {
         nombreUsuario: request.session.username || '',
+        permisos: request.session.permisos || [],
         csrfToken: request.csrfToken(),
     });
 }
 
 exports.post_agregar = (request, response, next) => {
-    let producto = new Producto(0, request.body.nombre_producto, request.body.precio_producto, request.body.descripcion_producto, request.body.imagen_producto);
+    console.log(request.file);
+    let producto = new Producto(0, request.body.nombre_producto, request.body.precio_producto, request.body.descripcion_producto, request.file.filename);
     
     //Agregar producto creado a los productos
     producto.save()
@@ -62,10 +66,9 @@ exports.post_agregar = (request, response, next) => {
 
     //Agregar productos a un txt
     Producto.fetchAll().then(([rows, fieldData]) => {
-        
-        filesystem.writeFileSync('Laboratorio18/productos.txt', '');
+        filesystem.writeFileSync('Laboratorio22/productos.txt', '');
         for (let i = 0; i < rows.length; i++) {
-            filesystem.appendFileSync('Laboratorio18/productos.txt', rows[i].nombre  + "\n" + rows[i].precio + "\n" + rows[i].texto + "\n" + rows[i].url+ "\n\n");
+            filesystem.appendFileSync('Laboratorio22/productos.txt', rows[i].nombre  + "\n" + rows[i].precio + "\n" + rows[i].texto + "\n" + rows[i].url+ "\n\n");
         }
     })
     .catch((error) => {
@@ -79,7 +82,8 @@ exports.get_root = (request, response, next) => {
         response.render('home', {
             productos: rows,
             ultimo_producto: request.cookies.ultimo_producto || '',
-            nombreUsuario: request.session.username || ''
+            nombreUsuario: request.session.username || '',
+            permisos: request.session.permisos || [],
         });
     })
     .catch((error) => {
